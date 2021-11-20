@@ -44,11 +44,6 @@ public final class Main extends JavaPlugin {
 
         saveDefaultConfig();
 
-        ConfigUtil.updateConfig(this, "config.yml"); // update config file
-
-        saveResource("messages.yml", false);
-
-        ConfigUtil.updateConfig(this, "messages.yml");
 
         I18N i18n = new I18N();
 
