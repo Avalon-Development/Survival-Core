@@ -1,0 +1,4 @@
+name: AvalonCore
+version: '${project.version}'
+main: net.avalondevs.avaloncore.Main
+api-version: 1.17
