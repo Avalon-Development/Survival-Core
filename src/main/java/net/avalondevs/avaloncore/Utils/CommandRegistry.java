@@ -4,7 +4,7 @@ import lombok.experimental.UtilityClass;
 import net.avalondevs.avaloncore.Commands.Admin.EatCommand;
 import net.avalondevs.avaloncore.Commands.Admin.HealCommand;
 import net.avalondevs.avaloncore.Commands.Admin.SetspawnCommand;
-import net.avalondevs.avaloncore.Commands.Admin.TagCommand;
+import net.avalondevs.avaloncore.Commands.players.TagCommand;
 import net.avalondevs.avaloncore.Commands.players.*;
 import net.avalondevs.avaloncore.Commands.voucher.VoucherCommand;
 import net.avalondevs.avaloncore.Utils.command.CommandFramework;
@@ -17,9 +17,9 @@ public class CommandRegistry {
         framework.registerCommands(new VoucherCommand()); // load VoucherCommand into the framework
 
         framework.registerCommands(new SetspawnCommand());
+        framework.registerCommands(new TagCommand());
         framework.registerCommands(new HealCommand());
         framework.registerCommands(new EatCommand());
-        framework.registerCommands(new TagCommand());
 
         framework.registerCommands(new TpaCommand());
         framework.registerCommands(new TpAccept());

@@ -16,15 +16,42 @@ public class Utils {
         return ChatColor.translateAlternateColorCodes('&', s);
     }
 
-    public static void createMenu(Player player) {
-        Inventory gui = Bukkit.createInventory(null, 27, chat("&7Tags Menu"));
+    public static void createMenu(Player player, String type) {
+        if (type == "tags") {
+        Inventory gui = Bukkit.createInventory(null, 9, chat("&7Tags Menu"));
 
-        ItemStack book = new ItemStack(Material.BOOK);
-        ItemMeta book_meta = book.getItemMeta();
+        ItemStack book1 = new ItemStack(Material.BOOK);
+        ItemMeta book1_meta = book1.getItemMeta();
 
-        book_meta.setDisplayName("test");
+        ItemStack book2 = new ItemStack(Material.BOOK);
+        ItemMeta book2_meta = book2.getItemMeta();
 
-        gui.setItem(13, book);
+        ItemStack book3 = new ItemStack(Material.BOOK);
+        ItemMeta book3_meta = book3.getItemMeta();
+
+        ItemStack book4 = new ItemStack(Material.BOOK);
+        ItemMeta book4_meta = book4.getItemMeta();
+
+        book1_meta.setDisplayName(chat("&7[&bAvalon&7]&b"));
+        book1.setItemMeta(book1_meta);
+
+        book2_meta.setDisplayName(chat("&7[&aMinecrafter&7]&a"));
+        book2.setItemMeta(book2_meta);
+
+        book3_meta.setDisplayName(chat("&7[&5Lover&7]&5"));
+        book3.setItemMeta(book3_meta);
+
+        book4_meta.setDisplayName(chat("&7[&cFriend&7]&c"));
+        book4.setItemMeta(book4_meta);
+
+        gui.setItem(1, book1);
+        gui.setItem(3, book2);
+        gui.setItem(5, book3);
+        gui.setItem(7, book4);
+
         player.openInventory(gui);
+    } else {
+
+        }
     }
 }

@@ -7,6 +7,7 @@ import net.avalondevs.avaloncore.Utils.*;
 import net.avalondevs.avaloncore.Utils.command.CommandFramework;
 import net.avalondevs.avaloncore.data.Voucher;
 import net.avalondevs.avaloncore.data.VoucherManager;
+import net.avalondevs.avaloncore.listeners.GuiListener;
 import net.milkbowl.vault.economy.Economy;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
@@ -54,7 +55,7 @@ public final class Main extends JavaPlugin {
 
         CommandRegistry.registerModuleCommands(framework);
         CommandRegistry.registerCommands(framework);
-
+        getServer().getPluginManager().registerEvents(new GuiListener(), this);
         Voucher.cache();
         VoucherManager.instance.cache();
     }
